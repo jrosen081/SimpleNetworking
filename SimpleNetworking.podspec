@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'SimpleNetworking'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of SimpleNetworking.'
+  s.version          = '1.0.0'
+  s.summary          = 'SimpleNetworking makes making network request simple. It removes the boilerplate from making network requests, and gives availability to mock data and url requests. It is really extensible with only a few lines of code.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?

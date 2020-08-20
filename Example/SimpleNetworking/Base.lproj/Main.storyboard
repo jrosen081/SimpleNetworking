@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,11 +18,69 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dCY-Gu-mQ6">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eA4-tg-1xP">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="111"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ftE-OC-7ju">
+                                        <rect key="frame" x="0.0" y="111" width="375" height="111.5"/>
+                                        <state key="normal" title="Use Completion Handler"/>
+                                        <connections>
+                                            <action selector="performRequestWithCompletionHandler:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kRS-z9-Twm"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1op-u0-Fb9">
+                                        <rect key="frame" x="0.0" y="222.5" width="375" height="111"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RiX-Bs-LyQ">
+                                        <rect key="frame" x="0.0" y="333.5" width="375" height="111"/>
+                                        <state key="normal" title="Use Publisher"/>
+                                        <connections>
+                                            <action selector="performRequestWithPublisher:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3Tn-UE-HKj"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEo-oN-NnP">
+                                        <rect key="frame" x="0.0" y="444.5" width="375" height="111.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zPr-3w-DIC">
+                                        <rect key="frame" x="0.0" y="556" width="375" height="111"/>
+                                        <state key="normal" title="Use Future"/>
+                                        <connections>
+                                            <action selector="performRequestWithFuture:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="oak-ue-bbG"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="dCY-Gu-mQ6" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="5eb-NU-K0K"/>
+                            <constraint firstItem="dCY-Gu-mQ6" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="9ys-RM-bh8"/>
+                            <constraint firstItem="dCY-Gu-mQ6" firstAttribute="centerY" secondItem="kh9-bI-dsS" secondAttribute="centerY" id="Yuo-4V-b41"/>
+                            <constraint firstItem="dCY-Gu-mQ6" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="olG-vT-59h"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="completionHandlerLabel" destination="eA4-tg-1xP" id="FI0-Tl-bV0"/>
+                        <outlet property="futureLabel" destination="XEo-oN-NnP" id="Ug8-Oy-CdT"/>
+                        <outlet property="publisherLabel" destination="1op-u0-Fb9" id="CsJ-SH-agO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="132" y="134"/>
         </scene>
     </scenes>
 </document>
